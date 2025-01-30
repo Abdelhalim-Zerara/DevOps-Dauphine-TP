@@ -14,3 +14,6 @@
     172.17.0.1 - - [30/Jan/2025:09:14:12 +0000] "GET / HTTP/1.1" 302 235 "-" "curl/8.5.0"
     172.17.0.1 - - [30/Jan/2025:09:15:41 +0000] "GET / HTTP/1.1" 302 235 "-" "curl/8.5.0"
 3-d- on arrive à une page de connection de DB (beige) de WordPress
+
+# Partie 3
+4- j'ai eu une page de refus de connection db (surement j'ai du me tromper sur les identifiants)

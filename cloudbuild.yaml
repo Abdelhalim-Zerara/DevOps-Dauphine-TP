@@ -1,9 +1,17 @@
 steps:
+# - name: 'hashicorp/terraform:light'
+#   args: ['init']
+#   dir: '.'
+
+# - name: 'hashicorp/terraform:light'
+#   args: ['apply', '-auto-approv']
+#   dir: '.'
+
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/$PROJECT_ID/custom-wordpress:lastest', '.']
+  args: ['build', '-t', 'us-central1-docker.pkg.dev/iron-flash-376014/website-tools/custom-wordpress:latest', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/$PROJECT_ID/custom-wordpress:lastest']
+  args: ['push', 'us-central1-docker.pkg.dev/iron-flash-376014/website-tools/custom-wordpress:latest']
 
 images:
-- 'gcr.io/$PROJECT_ID/custom-wordpress:lastest'
+- 'us-central1-docker.pkg.dev/iron-flash-376014/website-tools/custom-wordpress:latest'
 
