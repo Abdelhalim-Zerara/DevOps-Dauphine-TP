@@ -17,3 +17,15 @@
 
 # Partie 3
 4- j'ai eu une page de refus de connection db (surement j'ai du me tromper sur les identifiants)
+
+# Partie 4
+## Critiques du TP et Éléments Redondants
+Redondance des Paramètres :
+Les paramètres comme le nom de projet, la région, l'image Docker, les secrets (mot de passe), etc., sont souvent recopiés plusieurs fois dans différents fichiers ou ressources.
+Par exemple, project_id, region, commit_sha, WORDPRESS_DB_PASSWORD sont répétés.
+Manque d'Automatisation :
+L'application des changements d'infrastructure manuellement avec Terraform peut être automatisée avec Cloud Build pour une meilleure intégration continue.
+Sécurité des Secrets :
+Le stockage des mots de passe en clair dans le code Terraform est une mauvaise pratique en matière de sécurité.
+Complexité de la Configuration :
+La configuration peut devenir complexe à maintenir si elle n'est pas bien structurée. Des outils comme Helm pour Kubernetes peuvent simplifier cela.

@@ -1,11 +1,11 @@
 steps:
-# - name: 'hashicorp/terraform:light'
-#   args: ['init']
-#   dir: '.'
+- name: 'hashicorp/terraform:light'
+  args: ['init',terraform-wordpress/']
+  dir: '.'
 
-# - name: 'hashicorp/terraform:light'
-#   args: ['apply', '-auto-approv']
-#   dir: '.'
+- name: 'hashicorp/terraform:light'
+  args: ['apply', '-auto-approve', 'terraform-wordpress/']
+  dir: '.'
 
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'us-central1-docker.pkg.dev/iron-flash-376014/website-tools/custom-wordpress:latest', '.']
